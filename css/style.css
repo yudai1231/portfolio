@@ -1,0 +1,118 @@
+.promotion {
+    height: 821px;
+    z-index: -9999;
+    position: fixed;
+}
+
+.site_nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 50px;
+    transition: all 0.5s ease 0s;
+}
+
+.site_nav .logo {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: all 0.5s ease 0s;
+}
+
+.site_nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 80px;
+}
+
+.site_nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin: 0px 15px;
+    transition: all 0.5s ease 0s;
+}
+
+a.btn-sns--instagram {
+    background: linear-gradient(45deg, rgb(253, 244, 151) 0%, rgb(253, 244, 151) 5%, rgb(253, 89, 73) 45%, rgb(214, 36, 159) 60%, rgb(40, 90, 235) 90%);
+}
+
+a.btn-sns {
+    font-size: 40px;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    letter-spacing: 0px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 0px;
+    border-radius: 50%;
+}
+
+.catch_copy {
+    text-align: center;
+    position: relative;
+    top: 310px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.catch_small {
+    padding-bottom: 10px;
+    font-size: 50px;
+}
+
+.catch_big {
+    font-size: 100px;
+}
+
+.section {
+    height: 100vh;
+}
+
+.section.section-b {
+    background: white;
+}
+
+.footer {
+    background-color: black;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.footer p {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.copyright {
+    display: flex;
+}
+
+
+
+/* 最初のjquery初め */
+.start {
+	background: #FFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 9000;
+}
+.start p {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+	z-index: 9999;
+	width: 280px;
+}
+/* 最初のjquery終わり */
