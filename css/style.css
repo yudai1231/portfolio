@@ -77,6 +77,8 @@ a.btn-sns {
     position: relative;
     top: 310px;
     font-family: "Times New Roman", Times, serif;
+    background-color: rgba(255,255,255,0.5);
+    clip-path: polygon(50% -80%, 90% 50%, 50% 180%, 10% 50%);
 }
 
 .catch_small {
@@ -87,19 +89,47 @@ a.btn-sns {
 .catch_big {
     font-size: 100px;
 }
-
+/* main初め */
 .section {
     height: 100vh;
 }
 
 .section-b {
-    
+    /* background-color: rgba(255,255,255,0.9); */
+    background-color: #ffffff;
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+}
+
+.section-c {
+    height: 20vh;
+}
+
+.section-d {
+    /* background-color: rgba(0,0,0,0.9); */
+    background-color: #000000;
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 90%);
+}
+
+.section-e {
+    height: 10vh;
+}
+
+.section-f {
+    /* background-color: rgba(224,255,255,0.9); */
+    background-color: #e0ffff;
+    height: 60vh;
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
 }
 
 
-.section.section-d {
-    background-color: black;
-}
+/* main終わり */
+
+/* footer nav 初め */
+/* .logo_footer {
+    position: relative;
+    top: 20%;
+} */
+/* footer nav 終わり */
 
 /* フッター初め */
 .footer {

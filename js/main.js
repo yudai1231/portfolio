@@ -5,4 +5,10 @@ $(function() {
 	setTimeout(function(){
 		$('.start').fadeOut(500);
 	},2500); //2.5秒後にロゴ含め真っ白背景をフェードアウト！
+
+	
+
+
+
+
 });
