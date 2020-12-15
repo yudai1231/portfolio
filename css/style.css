@@ -125,10 +125,102 @@ a.btn-sns {
 /* main終わり */
 
 /* footer nav 初め */
-/* .logo_footer {
+
+.section-f {
+    position: relative;
+    top: 40%;
+}
+ 
+.inner-block {
     position: relative;
     top: 20%;
-} */
+    left: 5%;
+}
+.cont {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 30px 0;
+}
+
+.cont-item {
+    display: block;
+    width: calc(100% / 4);
+}
+   
+.nav a {
+    display: block;
+    color: #000000;
+    font-size: 15px;
+}
+   
+.nav .ttl {
+    display: block;
+    margin: 30px 0 6px;
+    font-weight: bold;
+    color: #000000;
+    font-size: 15px;
+}
+   
+.nav .ttl:first-child {
+    margin-top: 0;
+}
+   
+.nav .ttl + .ttl {
+    margin-top: 10px;
+}
+   
+.nav ul {
+    display: block;
+    font-size: 12px;
+    line-height: 2;
+}
+   
+.nav li {
+    display: block;
+    font-size: 12px;
+    line-height: 2;
+}
+   
+.nav li:first-child {
+    margin-top: 0;
+}
+   
+ .nav li ul {
+    margin: 0 0 0 2em;
+}
+   
+.nav li li {
+    position: relative;
+}
+   
+.nav li li:before {
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    content: "";
+    display: block;
+    width: 4px;
+    height: 1px;
+}
+   
+.company {
+    display: block;
+    margin-top: 62px;
+}
+   
+.logo img {
+    width: 120px;
+}
+   
+.address {
+    display: block;
+    margin: 28px 0 0;
+    font-size: 15px;
+    line-height: 2;
+}
+
 /* footer nav 終わり */
 
 /* フッター初め */
@@ -179,4 +271,83 @@ a.btn-sns {
 .under {
     font-size: 100px;
 }
+
+/* トップに戻る初め */
+#page_top{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 10px;
+    bottom: 60px;
+    background: #3f98ef;
+    opacity: 0.6;
+    /* border-radius: 50%; */
+}
+#page_top a{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+}
+#page_top a::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f102';
+    font-size: 25px;
+    color: #fff;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: -5px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+}
+/* トップに戻る終わり */
+
 /* 最初のjquery終わり */
+
+@media screen and (max-width: 640px) {
+    .cont {
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .cont-item {
+      display: block;
+      width: 48%;
+    }
+
+    .cont-item:nth-child(n+3) {
+      margin-top: 30px;
+    }
+
+    .nav ul {
+      margin: 0;
+      font-size: 10px;
+    }
+
+    .nav ul + .ttl {
+      margin-top: 10px;
+    }
+
+    #footer04 .nav li {
+      font-size: 10px;
+    }
+
+    #footer04 .company {
+      margin-top: 30px;
+    }
+
+    .address {
+      margin: 10px 0 0;
+      font-size: 10px;
+    }
+}
+   
