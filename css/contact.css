@@ -69,7 +69,7 @@ a.btn-sns {
 .contact {
     width: 80%;
     height: 160vh;
-    background-color: rgb(255, 255, 255);
+    background-color: #f5f5f5;
     text-align: center;
     margin: 0px auto;
 }
@@ -105,14 +105,6 @@ a.btn-sns {
     text-decoration: none;
 }
 
-/* .fa, .fas {
-    font-weight: 900;
-}
-
-.fa, .far, .fas {
-    font-family: "Font Awesome 5 Free";
-} */
-
 .form-group h2::after {
     content: "※必須";
     color: red;
@@ -121,10 +113,6 @@ a.btn-sns {
 #go_out::after {
     content: none;
 }
-
-/* *, ::before, ::after {
-    box-sizing: inherit;
-} */
 
 .form-group h2 {
     font-size: 25px;
@@ -139,10 +127,6 @@ a.btn-sns {
 input, select {
     vertical-align: middle;
 }
-
-/* *, ::before, ::after {
-    box-sizing: inherit;
-} */
 
 #for_example {
     padding: 10px 0px;
