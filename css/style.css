@@ -92,8 +92,13 @@ a.btn-sns {
     height: 100vh;
 }
 
-.section.section-b {
-    background: white;
+.section-b {
+    
+}
+
+
+.section.section-d {
+    background-color: black;
 }
 
 /* フッター初め */
@@ -125,6 +130,7 @@ a.btn-sns {
 	width: 100%;
 	z-index: 9000;
 }
+
 .start .title {
 	position: fixed;
 	left: 50%;
