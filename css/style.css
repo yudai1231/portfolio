@@ -4,6 +4,7 @@
     position: fixed;
 }
 
+/* ナビゲーション初め */
 .site_nav {
     position: fixed;
     top: 0px;
@@ -15,6 +16,12 @@
     align-items: center;
     padding: 30px 50px;
     transition: all 0.5s ease 0s;
+}
+
+.site_nav.scroll-nav {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0.5rem 1rem;
+    padding: 10px 50px;
+    background: white;
 }
 
 .site_nav .logo {
@@ -54,6 +61,17 @@ a.btn-sns {
     border-radius: 50%;
 }
 
+.logo {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.site_nav.scroll-nav .logo,
+.site_nav.scroll-nav ul li a {
+  color: black;
+}
+
+/* ナビゲーション終わり */
+
 .catch_copy {
     text-align: center;
     position: relative;
@@ -78,6 +96,7 @@ a.btn-sns {
     background: white;
 }
 
+/* フッター初め */
 .footer {
     background-color: black;
     color: rgb(255, 255, 255);
@@ -93,7 +112,7 @@ a.btn-sns {
 .copyright {
     display: flex;
 }
-
+/* フッター終わり */
 
 
 /* 最初のjquery初め */
@@ -106,13 +125,22 @@ a.btn-sns {
 	width: 100%;
 	z-index: 9000;
 }
-.start p {
+.start .title {
 	position: fixed;
 	left: 50%;
-	top: 50%;
+	top: 45%;
 	transform: translate(-50%, -50%);
 	display: none;
-	z-index: 9999;
-	width: 280px;
+    z-index: 9999;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.top {
+    font-size: 50px;
+}
+
+.under {
+    font-size: 100px;
 }
 /* 最初のjquery終わり */
