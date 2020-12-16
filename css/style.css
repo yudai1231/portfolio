@@ -121,6 +121,40 @@ a.btn-sns {
     clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
 }
 
+/* jquery main 初め */
+main {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.section-b.hide {
+    transform: translateX(-100%);
+}
+  
+.section-b {
+    transform: translateX(0);
+    transition: all 1s ease;
+}
+
+.section-d.hide {
+    transform: translateX(100%);
+}
+  
+.section-d {
+    transform: translateX(0);
+    transition: all 1s ease;
+}
+
+.section-f.hide {
+    transform: translateX(-100%);
+}
+  
+.section-f {
+    transform: translateX(0);
+    transition: all 1s ease;
+}
+/* jquery main 終わり */
 
 /* main終わり */
 
@@ -281,8 +315,8 @@ a.btn-sns {
     bottom: 60px;
     background: #3f98ef;
     opacity: 0.6;
-    /* border-radius: 50%; */
 }
+
 #page_top a{
     position: relative;
     display: block;
@@ -290,6 +324,7 @@ a.btn-sns {
     height: 50px;
     text-decoration: none;
 }
+
 #page_top a::before{
     font-family: 'Font Awesome 5 Free';
     font-weight: 900;
@@ -350,4 +385,3 @@ a.btn-sns {
       font-size: 10px;
     }
 }
-   

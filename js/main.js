@@ -25,6 +25,53 @@ $(function() {
 	});
 	// ページトップに戻る　終わり
 
+	$(window).on('scroll', function() {
+		// idがq-11の要素の画面最上部からの距離を取得
+		let sec_b = $('.section-b').offset().top;
+	
+		// 画面の高さ
+		let wh = $(window).height();
+	
+		// $(window).scrollTop()は現在のスクロール位置
+		if (sec_b <= $(window).scrollTop() + wh) {
+		  $('.section-b').removeClass('hide');
+		} else {
+		  $('.section-b').addClass('hide');
+		}
+		
+	})
+
+	$(window).on('scroll', function() {
+		// idがq-11の要素の画面最上部からの距離を取得
+		let sec_d = $('.section-d').offset().top;
+	
+		// 画面の高さ
+		let wh = $(window).height();
+	
+		// $(window).scrollTop()は現在のスクロール位置
+		if (sec_d <= $(window).scrollTop() + wh) {
+		  $('.section-d').removeClass('hide');
+		} else {
+		  $('.section-d').addClass('hide');
+		}
+		
+	})
+
+	$(window).on('scroll', function() {
+		// idがq-11の要素の画面最上部からの距離を取得
+		let sec_f = $('.section-f').offset().top;
+	
+		// 画面の高さ
+		let wh = $(window).height();
+	
+		// $(window).scrollTop()は現在のスクロール位置
+		if (sec_f <= $(window).scrollTop() + wh) {
+		  $('.section-f').removeClass('hide');
+		} else {
+		  $('.section-f').addClass('hide');
+		}
+		
+	})
 
 
 });
