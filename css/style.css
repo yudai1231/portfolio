@@ -106,8 +106,40 @@ a.btn-sns {
 
 .section-d {
     /* background-color: rgba(0,0,0,0.9); */
-    background-color: #000000;
+    /* background-color: #000000; */
+    background: url(../img/workplace_new.jpg);
+    background-position: 40% 40%;
     clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 90%);
+    position: relative;
+}
+
+.main_d {
+    position: absolute;
+    bottom: 20%;
+    letter-spacing: 2px;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 2%;
+    border-radius:5% ;
+}
+
+.main_d_title {
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+
+.main_d_sentence {
+    margin-top: 30px;
+    font-size: 30px;
+}
+
+.next_page {
+    display: flex;
+    align-items: center;
+}
+
+.fas {
+    color: red;
 }
 
 .section-e {
@@ -116,7 +148,8 @@ a.btn-sns {
 
 .section-f {
     /* background-color: rgba(224,255,255,0.9); */
-    background-color: #e0ffff;
+    /* background-color: #e0ffff; */
+    background-color: #f7f7f7;
     height: 60vh;
     clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
 }
@@ -156,6 +189,19 @@ main {
 }
 /* jquery main 終わり */
 
+/* section-b 画像初め */
+.business {
+    width: 300px;
+}
+
+.business::after {
+    content: url(../img/women.jpg);
+    width: 500px;
+    z-index: 9999;
+}
+/* section-b 画像終わり */
+
+
 /* main終わり */
 
 /* footer nav 初め */
@@ -184,7 +230,7 @@ main {
 }
    
 .nav a {
-    display: block;
+    /* display: block; */
     color: #000000;
     font-size: 15px;
 }

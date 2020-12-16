@@ -25,6 +25,7 @@ $(function() {
 	});
 	// ページトップに戻る　終わり
 
+	// translate初め
 	$(window).on('scroll', function() {
 		// idがq-11の要素の画面最上部からの距離を取得
 		let sec_b = $('.section-b').offset().top;
@@ -72,6 +73,7 @@ $(function() {
 		}
 		
 	})
+	// translate終わり
 
 
 });
