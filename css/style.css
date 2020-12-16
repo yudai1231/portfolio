@@ -117,8 +117,8 @@ a.btn-sns {
     position: absolute;
     bottom: 20%;
     letter-spacing: 2px;
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #f7f7f7;
+    color: #000000;
     padding: 2%;
     border-radius:5% ;
 }
