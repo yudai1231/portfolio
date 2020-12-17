@@ -428,6 +428,10 @@ main {
     display: none;
 }
 
+#nav-toggle, #gloval-nav {
+    display: none;
+}
+
 
 @media screen and (max-width: 375px) {
     .start {
@@ -760,7 +764,7 @@ main {
         opacity: 1;
     }
 
-    .open #gloval-nav li {
+    .open #gloval-nav sli {
         opacity: 1;
         -webkit-transform: translateX(0);
                 transform: translateX(0);
