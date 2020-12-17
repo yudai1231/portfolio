@@ -75,5 +75,13 @@ $(function() {
 	})
 	// translate終わり
 
+	// ハンバーガーメニュー初め
+	$(function () {
+			$('#nav-toggle').on('click', function() {
+			$('body').toggleClass('open');
+		});
+	});	
+	// ハンバーガーメニュー終わり
+
 
 });
