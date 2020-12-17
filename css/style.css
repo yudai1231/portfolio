@@ -95,9 +95,16 @@ a.btn-sns {
 }
 
 .section-b {
-    /* background-color: rgba(255,255,255,0.9); */
     background-color: #ffffff;
     clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    display: flex;
+    position: relative;
+}
+
+.main_b_sentence {
+    margin-top: 10%;
+    font-size: 30px;
+    padding-left: 10%;
 }
 
 .section-c {
@@ -105,8 +112,6 @@ a.btn-sns {
 }
 
 .section-d {
-    /* background-color: rgba(0,0,0,0.9); */
-    /* background-color: #000000; */
     background: url(../img/workplace_new.jpg);
     background-position: 40% 40%;
     clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 90%);
@@ -147,8 +152,6 @@ a.btn-sns {
 }
 
 .section-f {
-    /* background-color: rgba(224,255,255,0.9); */
-    /* background-color: #e0ffff; */
     background-color: #f7f7f7;
     height: 60vh;
     clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
@@ -190,14 +193,39 @@ main {
 /* jquery main 終わり */
 
 /* section-b 画像初め */
-.business {
-    width: 300px;
+.photo {
+    position: relative;
 }
 
-.business::after {
+.photo::after {
+    position: absolute;
+    display: inline-block;
+    /* content: ''; */
+    bottom: 0%;
+    left: 60%;
     content: url(../img/women.jpg);
-    width: 500px;
-    z-index: 9999;
+    background-size: contain;
+}
+
+.service {
+    /* background: rgba(247,247,247,0.6); */
+    background: rgba(0,0,0,0.3);
+    z-index: 10;
+    width: 50%;
+    height: 45%;
+    position: absolute;
+    top: 10%;
+    right: 0%;
+}
+
+.main_b {
+    letter-spacing: 2px;
+    padding: 2%;
+}
+
+.main_b_title {
+    font-size: 50px;
+    /* padding-bottom: 20px; */
 }
 /* section-b 画像終わり */
 
