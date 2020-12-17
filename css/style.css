@@ -419,7 +419,14 @@ main {
 
 /* 最初のjquery終わり */
 
+
+
+
 @media screen and (max-width: 640px) {
+    .start {
+        display: none;
+    }
+
     .cont {
       -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
