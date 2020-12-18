@@ -10,6 +10,9 @@
     align-items: center;
     padding: 30px 50px;
     transition: all 0.5s ease 0s;
+}
+
+#nav_bg {
     background-color: black;
 }
 
@@ -249,182 +252,118 @@ label #text {
     }
 
     /* ハンバーガーメニュー初め */
-    #nav-toggle {
-        position: fixed;
-        top: 25px;
-        right: 25px;
-        height: 32px;
-        cursor: pointer;
-    }
-    
-    #nav-toggle > div {
-        position: relative;
-        width: 36px;
-    }
-    
-    #nav-toggle span {
-        width: 100%;
-        height: 1px;
-        left: 0;
-        display: block;
-        background: #333;
-        position: absolute;
-        -webkit-transition: top .5s ease, -webkit-transform .6s ease-in-out;
-        transition: top .5s ease, -webkit-transform .6s ease-in-out;
-        transition: transform .6s ease-in-out, top .5s ease;
-        transition: transform .6s ease-in-out, top .5s ease, -webkit-transform .6s ease-in-out;
-    }
-    
-    #nav-toggle span:nth-child(1) {
-        top: 0;
-    }
-
-    #nav-toggle span:nth-child(2) {
-        top: 14px;
-    }
-
-    #nav-toggle span:nth-child(3) {
-        top: 28px;
-    }
-
-    #nav-toggle:hover span:nth-child(1) {
-        top: 4px;
-    }
-
-    #nav-toggle:hover span:nth-child(3) {
-        top: 23px;
-    }
-    
-    .open #nav-toggle span {
-        background: #fff;
-    }
-
-    .open #nav-toggle span:nth-child(1) {
-        top: 15px;
-        -webkit-transform: rotate(45deg);
-                transform: rotate(45deg);
-    }
-
-    .open #nav-toggle span:nth-child(2) {
-        top: 15px;
-        width: 0;
-        left: 50%;
-    }
-
-    .open #nav-toggle span:nth-child(3) {
-        top: 15px;
-        -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    #nav-open {
+        display: inline-block;
+        width: 30px;
+        height: 22px;
+        vertical-align: middle;
+        margin-left: 70%;
     }
       
-    /* z-index */
-    #nav-toggle {
-        z-index: 1000;
+    /*ハンバーガーアイコンをCSSだけで表現*/
+    #nav-open span, #nav-open span:before, #nav-open span:after {
+        position: absolute;
+        transition: all 0.4s;
+        height: 3px;/*線の太さ*/
+        width: 25px;/*長さ*/
+        border-radius: 3px;
+        background: blue;
+        display: block;
+        content: '';
+        cursor: pointer;
+        z-index: 9999;/*最前面*/
     }
-    
-    #gloval-nav {
-        background: #000;
-        color: #fff;
+
+    #nav-open span:before {
+        bottom: -8px;
+    }
+
+    #nav-open span:after {
+        bottom: -16px;
+    }
+
+
+    /*中身*/
+    #nav-content {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        transition: .2s ease-in-out;
+    }
+
+    #nav-content.open {
+        display: block;
+        opacity: 1;
+        overflow: auto;
         position: fixed;
         top: 0;
-        left: 0;
         right: 0;
-        bottom: 0;
-        z-index: 990;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);/*背景色*/
+        overflow: hidden;/*ブラー効果でボヤけた部分を非表示*/
+        z-index: 1;
+    }
+
+
+    /*:beforeにぼかし効果を設定する*/
+    #nav-content.open:before {
+        content: '';
+        overflow: hidden;
+        -webkit-filter: blur(10px);
+        -moz-filter: blur(10px);
+        -o-filter: blur(10px);
+        -ms-filter: blur(10px);
+        filter: blur(10px);
+        z-index: -1;/*重なり順序を一番下にしておく*/
+    }
+
+
+    /*チェックが入ったら表示する内容*/
+
+    .hamburger-top {
+        height: 40px;/*×ボタンと被らないように*/
+    }
+
+    .category {
         text-align: center;
-        display: -webkit-box;
-        display: flex;
-        visibility: hidden;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-                flex-direction: column;
-        -webkit-box-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-                align-items: center;
-        font-size: 29px;
-        opacity: 0;
-        -webkit-transition: opacity .6s ease, visibility .6s ease;
-        transition: opacity .6s ease, visibility .6s ease;
-    }
-    
-    #gloval-nav a {
-        display: block;
-        color: #fff;
-        text-decoration: none;
-        padding: 10px 0;
-        -webkit-transition: color .6s ease;
-        transition: color .6s ease;
+        margin-top: 2rem;
     }
 
-    #gloval-nav a:hover {
-        color: #666;
-    }
-
-    #gloval-nav ul {
+    .category-title {
+        padding: 4rem;
         list-style: none;
     }
 
-    #gloval-nav ul li {
+    .category-title a {
+        color: #333;
+        text-decoration: none;
+    }
+
+
+    /*三本線を動かす*/
+    #nav-open.active span {
+        -webkit-transform: translateY(8px) rotate(-45deg);
+        transform: translateY(8px) rotate(-45deg);
+        background-color: blue;
+    }
+
+    #nav-open.active span:before {
+        -webkit-transform: translateY(-8px) rotate(45deg);/*打ち消す*/
+        transform: translateY(-8px) rotate(45deg);/*打ち消す*/
         opacity: 0;
-        -webkit-transform: translateX(200px);
-                transform: translateX(200px);
-        -webkit-transition: opacity .2s ease, -webkit-transform .6s ease;
-        transition: opacity .2s ease, -webkit-transform .6s ease;
-        transition: transform .6s ease, opacity .2s ease;
-        transition: transform .6s ease, opacity .2s ease, -webkit-transform .6s ease;
+        z-index: 9999;
     }
 
-    #gloval-nav ul li:nth-child(2) {
-        -webkit-transition-delay: .15s;
-            transition-delay: .15s;
+    #nav-open.active span:after {
+        -webkit-transform: translateY(-16px) rotate(45deg);
+        transform: translateY(-16px) rotate(90deg);
+        background-color: blue;
     }
-
-    #gloval-nav ul li:nth-child(3) {
-        -webkit-transition-delay: .3s;
-            transition-delay: .3s;
-    }
-
-    #gloval-nav ul li:nth-child(4) {
-        -webkit-transition-delay: .45s;
-            transition-delay: .45s;
-    }
-
-    #gloval-nav ul li:nth-child(5) {
-        -webkit-transition-delay: .6s;
-            transition-delay: .6s;
-    }
-
-    #gloval-nav ul li:nth-child(6) {
-        -webkit-transition-delay: .75s;
-            transition-delay: .75s;
-    }
-
-    #gloval-nav ul li:nth-child(7) {
-        -webkit-transition-delay: .9s;
-            transition-delay: .9s;
-    }
-    
-    /* open */
-    .open {
-        overflow: hidden;
-    }
-
-    .open #gloval-nav {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    .open #gloval-nav sli {
-        opacity: 1;
-        -webkit-transform: translateX(0);
-                transform: translateX(0);
-        -webkit-transition: opacity .9s ease, -webkit-transform 1s ease;
-        transition: opacity .9s ease, -webkit-transform 1s ease;
-        transition: transform 1s ease, opacity .9s ease;
-        transition: transform 1s ease, opacity .9s ease, -webkit-transform 1s ease;
-    }
-    /* ハンバーガーメニュー終わり */   
+    /* ハンバーガーメニュー終わり */
 
     .site_nav {
         top: -1%;
